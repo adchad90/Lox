@@ -1,0 +1,30 @@
+# ---- Python cache ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ---- Virtual environments ----
+venv/
+.venv/
+
+# ---- Lox user data (very sensitive) ----
+users/
+vaults/
+*.hash
+*.salt
+*.db
+master.hash
+vault.db
+vault.salt
+recovery_backup.txt
+
+# ---- OS / Editor files ----
+.DS_Store
+Thumbs.db
+
+# ---- Logs ----
+*.log
+
+# ---- Misc ----
+.env
