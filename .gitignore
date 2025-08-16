@@ -19,6 +19,12 @@ vault.db
 vault.salt
 recovery_backup.txt
 
+# ---- Build artifacts ----
+build/
+dist/
+*.egg-info/
+*.whl
+
 # ---- OS / Editor files ----
 .DS_Store
 Thumbs.db

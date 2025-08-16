@@ -4,7 +4,7 @@ A secure, multi-user command-line password manager that keeps your passwords saf
 
 ## ✨ Features
 
-- **🔒 Military-grade encryption** - AES-128 with bcrypt hashing
+- **🔒 Military-grade encryption** - AES with bcrypt hashing
 - **👥 Multi-user support** - Separate vaults for different users
 - **⏰ Auto-lock** - Sessions lock after 60 seconds of inactivity
 - **📋 Smart clipboard** - Auto-clears passwords after 20 seconds
@@ -54,7 +54,7 @@ Once running, use these options:
 
 ## 🛡️ Security
 
-- **Encryption:** Fernet (AES-128 CBC + HMAC-SHA256)
+- **Encryption:** AES
 - **Password hashing:** bcrypt with random salts
 - **Local storage:** All data stays on your machine
 - **Recovery tokens:** Secure backup for master password reset
@@ -72,7 +72,7 @@ Your encrypted vaults are stored locally at:
 
 Soon you'll be able to install with just:
 ```bash
-pip install lox-cli
+pip install loxword
 lox
 ```
 
