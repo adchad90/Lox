@@ -1,10 +1,10 @@
-44[build-system]
+[build-system]
 requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "loxword"
-version = "0.0.2"
+version = "0.0.4"
 authors = [
     {name = "Aditya Chavan", email = "iaditya.2016@gmail.com"},
 ]
@@ -43,6 +43,5 @@ Repository = "https://github.com/adchad90/Lox.git"
 
 [project.scripts]
 lox = "lox.main:main"
-
 [tool.setuptools]
 packages = ["lox"]

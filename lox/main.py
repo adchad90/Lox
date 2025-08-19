@@ -5,9 +5,10 @@ import threading
 import os
 import pyperclip
 
-from master import verify_master_password, set_master_password, reset_master_with_recovery
-from vault import get_fernet_key, load_vault, save_vault
-from utils import list_users, user_path, ensure_users_dir
+from .master import verify_master_password, set_master_password, reset_master_with_recovery
+from .vault import get_fernet_key, load_vault, save_vault
+from .utils import list_users, user_path, ensure_users_dir
+from getpass import getpass
 
 AUTOLOCK_TIMEOUT = 60  # seconds (adjustable)
 
@@ -176,7 +177,7 @@ def menu(fernet, user_path, reset_timer):
                 print("\n[!] Session locked due to inactivity. Please re-login.")
                 return "locked"
                 
-            from getpass import getpass
+            
             pswd = getpass("Password: ")
             reset_timer()
             if SESSION_LOCKED.is_set():
@@ -233,10 +234,10 @@ def menu(fernet, user_path, reset_timer):
                 
         elif choice == "5":
             # change master password flow
-            from master import set_master_password
+            
             print("Change master password (requires current password).")
             # require current password verification
-            from master import verify_master_password
+            
             cur_pw, _ = verify_master_password(user_path)
             reset_timer()
             if SESSION_LOCKED.is_set():
