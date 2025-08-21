@@ -19,7 +19,7 @@ def clear_screen():
 
 def copyAutoClear(data, timeout=20):
     pyperclip.copy(data)
-    print(f"Password copied to clipboard! (Will clear in {timeout}s)")
+    print(f"Copied to clipboard! (Will clear in {timeout}s)")
 
     def clear_clipboard():
         time.sleep(timeout)
@@ -131,9 +131,9 @@ def menu(fernet, user_path, reset_timer):
 
         clear_screen()
         print("\n--- THE LOX ---")
-        print("\nWelcome to the Lox: Your personal password manager, in your terminal")
-        print("1. Get Password")
-        print("2. Create/Update Password")
+        print("\nWelcome to the Lox: Your personal vault, in your terminal")
+        print("1. Get Secret")
+        print("2. Create/Update Entry")
         print("3. Delete Entry")
         print("4. List Entries")
         print("5. Change Master Password")
@@ -178,14 +178,14 @@ def menu(fernet, user_path, reset_timer):
                 return "locked"
                 
             
-            pswd = getpass("Password: ")
+            pswd = getpass("Secret: ")
             reset_timer()
             if SESSION_LOCKED.is_set():
                 clear_screen()
                 print("\n[!] Session locked due to inactivity. Please re-login.")
                 return "locked"
                 
-            confirm = getpass("Confirm Password: ")
+            confirm = getpass("Confirm Secret: ")
             reset_timer()
             if SESSION_LOCKED.is_set():
                 clear_screen()
@@ -193,7 +193,7 @@ def menu(fernet, user_path, reset_timer):
                 return "locked"
                 
             if pswd != confirm:
-                print("Passwords do not match. Entry not saved.")
+                print("Secrets do not match. Entry not saved.")
                 continue
             vault[name] = pswd
             save_vault(vault, fernet, user_path)
@@ -286,7 +286,7 @@ def menu(fernet, user_path, reset_timer):
 def main():
     clear_screen()
     ensure_users_dir()
-    print("Welcome to Lox (CLI password manager)")
+    print("Welcome to Lox (Your personal vault, in your terminal)")
 
     while True:
         user_path_selected, is_new_user = choose_user_interactive()

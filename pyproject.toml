@@ -24,6 +24,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Security",
     "Topic :: Utilities",
     "Environment :: Console",
@@ -31,9 +32,9 @@ classifiers = [
 ]
 keywords = ["password", "manager", "security", "cli", "encryption", "vault", "bcrypt"]
 dependencies = [
-    "cryptography",
-    "bcrypt",
-    "pyperclip",
+    "cryptography>=39.0.0,<44.0.0",  
+    "bcrypt>=4.0.0,<5.0.0",
+    "pyperclip>=1.8.0,<2.0.0",
 ]
 
 [project.urls]

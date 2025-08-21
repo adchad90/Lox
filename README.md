@@ -1,6 +1,6 @@
-# 🔐 Lox - CLI Password Manager
+# 🔐 Lox - CLI Based Vault
 
-A secure, multi-user command-line password manager that keeps your passwords safe locally.
+Safeguard anything that matters — from passwords to private files — with uncompromising security and simplicity.
 
 ## ✨ Features
 
@@ -10,6 +10,13 @@ A secure, multi-user command-line password manager that keeps your passwords saf
 - **📋 Smart clipboard** - Auto-clears passwords after 20 seconds
 - **🛡️ Recovery system** - Never lose access with recovery tokens
 - **🖥️ Cross-platform** - Works on Windows, macOS, and Linux
+
+## ✨ Use Cases
+
+- **Passwords**  
+- **API Keys, SSH Keys**
+- **Secret Messages**
+- **(Soon) File Encryption & Storage**
 
 ## 🚀 Quick Start
 
@@ -44,18 +51,19 @@ python -m Lox.main
 ## 🔧 Commands
 
 Once running, use these options:
-- `1` - Get Password (copies to clipboard)
-- `2` - Create/Update Password
+- `1` - Get Secret (copies to clipboard)
+- `2` - Create/Update Entry
 - `3` - Delete Entry  
 - `4` - List All Entries
 - `5` - Change Master Password
 - `6` - Logout
 - `7` - Exit
 
+
 ## 🛡️ Security
 
 - **Encryption:** AES
-- **Password hashing:** bcrypt with random salts
+- **Hashing:** bcrypt with random salts
 - **Local storage:** All data stays on your machine
 - **Recovery tokens:** Secure backup for master password reset
 - **Auto-lock:** Prevents unauthorized access after inactivity
